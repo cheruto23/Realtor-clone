@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 export default function Header() {
   const location = useLocation();
   const navigate = useNavigate();
+
   function PathMatchRoute(route) {
     if (route === location.pathname) {
       return true;
@@ -18,39 +19,39 @@ export default function Header() {
             src="https://static.rdc.moveaws.com/rdc-ui/logos/logo-brand.svg"
             alt="Logo"
             className="h-5 cursor-pointer"
-            onClick={() =>navigate("/")}
+            onClick={() => navigate("/")}
           />
         </div>
         <div>
           <ul className="flex space-x-10">
             <li
               className={`cursor-pointer py-3 text-sm font-semibold 
-                    text-grey-400 border-b-[3px] border-b-transparent 
+                    text-gray-400 border-b-[3px] border-b-transparent 
                     ${PathMatchRoute("/") && "text-black border-b-red-500"}`}
-                    onClick={() =>navigate("/")}
+              onClick={() => navigate("/")}
             >
               Home
             </li>
 
             <li
               className={`cursor-pointer py-3 text-sm font-semibold 
-                    text-grey-400 border-b-[3px] border-b-transparent 
+                    text-gray-400 border-b-[3px] border-b-transparent 
                     ${
                       PathMatchRoute("/offers") && "text-black border-b-red-500"
                     }`}
-                    onClick={() =>navigate("/offers")}
+              onClick={() => navigate("/offers")}
             >
               Offers
             </li>
 
             <li
               className={`cursor-pointer py-3 text-sm font-semibold 
-                        text-grey-400 border-b-[3px] border-b-transparent 
+                        text-gray-400 border-b-[3px] border-b-transparent 
                         ${
                           PathMatchRoute("/sign-in") &&
                           "text-black border-b-red-500"
                         }`}
-                        onClick={() =>navigate("/sign-in")}
+              onClick={() => navigate("/sign-in")}
             >
               Sign-In
             </li>
