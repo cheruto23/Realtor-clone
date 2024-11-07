@@ -26,9 +26,9 @@ export default function OAuth() {
                     name:user.displayName,
                     email:user.email,
                     timestamp: serverTimestamp(),
-                })
-                navigate("/")
+                })          
             }
+            navigate("/")
         } catch (error) {
             toast.error("Could not authorize with google")
         }

@@ -4,6 +4,7 @@ import Home from "./Pages/Home";
 import Profile from "./Pages/Profile";
 import Signin from "./Pages/Signin";
 import Signup from "./Pages/Signup";
+import PrivateRoutes from "./Components/PrivateRoutes";
 import Forgotpassword from "./Pages/Forgot-password";
 import Offers from "./Pages/Offers";
 import Header from "./Components/Header";
@@ -17,7 +18,9 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />}></Route>
+          <Route path="profile" element={<PrivateRoutes/>}>
           <Route path="/profile" element={<Profile />}></Route>
+          </Route>        
           <Route path="/sign-in" element={<Signin />}></Route>
           <Route path="/sign-up" element={<Signup />}></Route>
           <Route path="/forgot-password" element={<Forgotpassword />}></Route>
